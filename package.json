@@ -1,0 +1,38 @@
+{
+  "name": "image-filter-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rd /s /q www/ || true",
+    "build": "npm run clean && tsc && cp package.json www/package.json && mkdir www/tmp/ && cd www && zip -r Archive.zip . && cd ..",
+    "dev": "ts-node-dev ./src/server.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rimo802020/udacity-project2-imagefilterapp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rimo802020/udacity-project2-imagefilterapp/issues"
+  },
+  "homepage": "https://github.com/rimo802020/udacity-project2-imagefilterapp#readme",
+  "devDependencies": {
+    "@types/bluebird": "^3.5.33",
+    "@types/express": "^4.17.0",
+    "@types/node": "^11.15.54",
+    "ts-node": "^10.4.0",
+    "ts-node-dev": "^1.0.0-pre.40",
+    "tslib": "^1.10.0",
+    "tslint": "^5.18.0",
+    "typescript": "^3.9.10"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "jimp": "^0.16.1",
+    "lodash": "^4.17.15",
+    "rimraf": "^3.0.2"
+  }
+}
